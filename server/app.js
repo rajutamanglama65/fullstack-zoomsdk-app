@@ -1,6 +1,8 @@
 const express = require("express")
 const dotenv = require("dotenv")
 
+const middleware = require("./middleware")
+
 dotenv.config();
 
 const app = express();
@@ -8,6 +10,14 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000
+
+/**
+ * post request route
+ * this route handle request from client side application to generate or initialize a meeting 
+ */
+app.use("/generate", middleware.generate, (req, res) => {
+    res.status(200).send(res.locals.signature)
+})
 
 // GLobal error handling
 app.use((err, req, res, next) => {
