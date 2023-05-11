@@ -1,0 +1,50 @@
+.video-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .camara-button {
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:min(30px,1vw);
+    width: 60px !important;
+    height: 60px !important;
+   }
+
+   #share-canvas {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  #share-canvas:hidden{
+    display: none;
+  }
+
+  #self-video {
+    position: absolute;
+    width: 254px;
+    height: 143px;
+    top: 50px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+
+  }
+
+  #self-video:single-self-video{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #self-video:self-video-show{
+    display: block;
+  }

@@ -40,11 +40,13 @@ function App(props) {
       }
 
       // call function and create clean up functionality
-      init();
-      return () => {
-        ZoomVideo.destroyClient();
-      }
+    init();
+    return () => {
+      ZoomVideo.destroyClient();
     }
+    }
+
+    
   }, [sdkKey, signature, client, topic, name, passWord])
   return (
     <div className="App">
@@ -54,7 +56,7 @@ function App(props) {
           <Router>
             <Routes>
               <Route path='/' element={<Home props={props} status={status} />} />
-              <Route path='/vedio' element={<VideoContainer />} />
+              <Route path='/video' element={<VideoContainer />} />
             </Routes>
           </Router>
         </MediaContext.Provider>

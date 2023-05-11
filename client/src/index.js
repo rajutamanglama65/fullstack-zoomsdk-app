@@ -15,7 +15,8 @@ const getToken = async (options) => {
    * parse body of response variable as JSON
    * return variable
    */
-  let response = await fetch('/generate', options).then(response => response.json());
+  let response = await fetch('http://localhost:5000/generate', options).then(response => response.json());
+  console.log("Hey, I am called")
   return response
 }
 
