@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@zoom/videosdk": "^1.7.5",
+    "antd": "^5.4.7",
+    "react-router-dom": "^6.11.1"
+  }
+}
